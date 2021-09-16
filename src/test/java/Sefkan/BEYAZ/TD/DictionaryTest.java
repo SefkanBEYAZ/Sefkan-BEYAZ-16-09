@@ -40,13 +40,13 @@ public class DictionaryTest {
         List<String> traduc = new ArrayList<>();
         traduc.add("against");
         traduc.add("versus");
-        assertThat(dict.getMultipleTranslation("contre"), equalTo(traduc));
+        assertThat(dict.getTranslation("contre"), equalTo(traduc));
     }
 
     @Test public void TestMultipleTranslation(){
         dict.setList("against");
         dict.setList("versus");
         dict.addMultipleTranslation("contre", dict.getList());
-        assertThat(dict.getMultipleTranslation("contre"),equalTo(dict.getList()));
+        assertThat(dict.getTranslation("contre"),equalTo(dict.getList()));
     }
 }

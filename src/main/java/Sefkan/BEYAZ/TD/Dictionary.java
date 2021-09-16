@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class Dictionary {
     
     private String name;
-    private HashMap<String,String> traduction;
     private HashMap<String,List<String>> traduction_multiple;
     private List<String> list;
 
@@ -14,7 +13,6 @@ public class Dictionary {
     public Dictionary(){}
     public Dictionary(String name){
         this.name=name;
-        this.traduction= new HashMap<>();
         this.traduction_multiple= new HashMap<>();
         this.list= new ArrayList<String>();
     }
@@ -27,12 +25,7 @@ public class Dictionary {
         return this.name;
     }
 
-    public String getTranslation(String mot){
-        
-        return this.traduction.get(mot);
-    }
-
-    public List getMultipleTranslation(String mot){
+    public List getTranslation(String mot){
         
         return this.traduction_multiple.get(mot);
     }
@@ -46,7 +39,7 @@ public class Dictionary {
 
     public boolean isEmpty(){
 
-        if (this.traduction.isEmpty() || this.traduction_multiple.isEmpty()) return true;
+        if (this.traduction_multiple.isEmpty()) return true;
         else return false;
     }
 
@@ -54,7 +47,6 @@ public class Dictionary {
             list.clear();
             list.add(traduction);
             this.traduction_multiple.put(mot,list);
-            this.traduction.put(mot, traduction);
         
     }
 
