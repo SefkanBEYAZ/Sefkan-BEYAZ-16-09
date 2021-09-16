@@ -1,5 +1,7 @@
 package Sefkan.BEYAZ.TD;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Before;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,10 +16,12 @@ public class DictionaryTest {
     @Before
     public void initialize(){
         dict= new Dictionary("Example");
-        dict.addTranslation("contre", "against");
-        dict.setList("against");
-        dict.setList("versus");
-        dict.addMultipleTranslation("contre", dict.getList());
+        List<String> traduc = new ArrayList<>();
+        dict.addTranslation("mot", "word");
+        traduc.add("against");
+        traduc.add("versus");
+        dict.addMultipleTranslation("contre", traduc);
+       
     }
     @Test public void TestDictionaryName(){
         
@@ -32,10 +36,17 @@ public class DictionaryTest {
     } 
 
     @Test public void testOneTranslation() {
-        assertThat(dict.getTranslation("contre"), equalTo("against"));
+
+        List<String> traduc = new ArrayList<>();
+        traduc.add("against");
+        traduc.add("versus");
+        assertThat(dict.getMultipleTranslation("contre"), equalTo(traduc));
     }
 
     @Test public void TestMultipleTranslation(){
+        dict.setList("against");
+        dict.setList("versus");
+        dict.addMultipleTranslation("contre", dict.getList());
         assertThat(dict.getMultipleTranslation("contre"),equalTo(dict.getList()));
     }
 }

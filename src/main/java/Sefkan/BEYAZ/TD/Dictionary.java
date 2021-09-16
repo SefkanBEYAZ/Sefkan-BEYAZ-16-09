@@ -46,11 +46,14 @@ public class Dictionary {
 
     public boolean isEmpty(){
 
-        if (this.traduction.isEmpty()) return true;
+        if (this.traduction.isEmpty() || this.traduction_multiple.isEmpty()) return true;
         else return false;
     }
 
     public void addTranslation(String mot, String traduction){
+            list.clear();
+            list.add(traduction);
+            this.traduction_multiple.put(mot,list);
             this.traduction.put(mot, traduction);
         
     }
