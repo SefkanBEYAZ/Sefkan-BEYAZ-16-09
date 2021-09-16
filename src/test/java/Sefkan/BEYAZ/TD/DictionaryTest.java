@@ -23,7 +23,12 @@ public class DictionaryTest {
 
     @Test public void DictionaryVide(){
 
-        assertThat(dict.isEmpty(),equalTo(true));
+        assertThat(dict.isEmpty(),equalTo(false));
 
     } 
+
+    @Test public void testOneTranslation() {
+        //dict.addTranslation("contre", "against");
+        assertThat(dict.getTranslation("contre"), equalTo("against"));
+}
 }

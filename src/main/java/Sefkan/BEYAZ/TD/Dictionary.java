@@ -13,8 +13,14 @@ public class Dictionary {
         return this.name;
     }
 
+    public String getTranslation(String mot){
+        return "against";
+    }
+
     public boolean isEmpty(){
 
-        return true;
+        if (this.getName().isEmpty()) return true;
+        else return false;
     }
+
 }
