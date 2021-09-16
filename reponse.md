@@ -27,5 +27,8 @@
 [X] 1-On peut ajouter à un mot une List et non pas un String
 [X] 2-Ajouter un test permettant de vérifier le fonctionnement d’une traduction ayant deux sens possibles.
 [X] 3-Proposer une implémentation simple, rapide et qui passe les tests existants afin d’atteindre la green bar.
-[ ] 4- 
+[X] 4- 
+
+#Traduction Inverse#
+[X] 1-Écrire un test afin de vérifier le fonctionnement de telles traductions.
 

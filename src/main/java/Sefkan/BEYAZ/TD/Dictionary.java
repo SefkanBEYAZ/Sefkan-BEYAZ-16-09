@@ -25,7 +25,7 @@ public class Dictionary {
         return this.name;
     }
 
-    public List getTranslation(String mot){
+    public List<String> getTranslation(String mot){
         
         return this.traduction_multiple.get(mot);
     }
@@ -53,6 +53,17 @@ public class Dictionary {
     public void addMultipleTranslation(String mot, List<String> traductions){
             this.traduction_multiple.put(mot, traductions);
     
+    }
+
+    public String GetInverse(String traduction){
+        String ret= null;
+        for(String key: this.traduction_multiple.keySet())
+            for(String i: this.getTranslation(key)){
+                if(i == traduction){
+                    ret=key;
+                }
+            }
+            return ret;
     }
 
 }

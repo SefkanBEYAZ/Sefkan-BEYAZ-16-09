@@ -49,4 +49,8 @@ public class DictionaryTest {
         dict.addMultipleTranslation("contre", dict.getList());
         assertThat(dict.getTranslation("contre"),equalTo(dict.getList()));
     }
+
+    @Test public void TestTraductionInverse(){
+        assertThat(dict.GetInverse("against"),equalTo("contre"));
+    }
 }
