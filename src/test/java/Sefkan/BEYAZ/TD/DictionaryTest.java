@@ -15,6 +15,9 @@ public class DictionaryTest {
     public void initialize(){
         dict= new Dictionary("Example");
         dict.addTranslation("contre", "against");
+        dict.setList("against");
+        dict.setList("versus");
+        dict.addMultipleTranslation("contre", dict.getList());
     }
     @Test public void TestDictionaryName(){
         
@@ -30,5 +33,9 @@ public class DictionaryTest {
 
     @Test public void testOneTranslation() {
         assertThat(dict.getTranslation("contre"), equalTo("against"));
-}
+    }
+
+    @Test public void TestMultipleTranslation(){
+        assertThat(dict.getMultipleTranslation("contre"),equalTo(dict.getList()));
+    }
 }

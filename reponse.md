@@ -21,3 +21,8 @@
 [7] 7- Améliorer le test du vide du dictionnaire en augmentant le test initial.
 
 #JUnit#
+[X] Prévoir une fixture pour l’ensemble des tests de la classe DictionaryTest.
+
+#Traductions multiples#
+[X] 1-On peut ajouter à un mot une List et non pas un String
+[X] 2-Ajouter un test permettant de vérifier le fonctionnement d’une traduction ayant deux sens possibles.
