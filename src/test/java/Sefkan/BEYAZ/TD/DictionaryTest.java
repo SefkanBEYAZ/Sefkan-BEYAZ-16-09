@@ -14,6 +14,7 @@ public class DictionaryTest {
     @Before
     public void initialize(){
         dict= new Dictionary("Example");
+        dict.addTranslation("contre", "against");
     }
     @Test public void TestDictionaryName(){
         
@@ -23,12 +24,11 @@ public class DictionaryTest {
 
     @Test public void DictionaryVide(){
 
-        assertThat(dict.isEmpty(),equalTo(true));
+        assertThat(dict.isEmpty(),equalTo(false));
 
     } 
 
     @Test public void testOneTranslation() {
-        dict.addTranslation("contre", "against");
         assertThat(dict.getTranslation("contre"), equalTo("against"));
 }
 }

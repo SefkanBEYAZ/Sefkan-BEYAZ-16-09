@@ -17,3 +17,7 @@
 [X] 3- Utiliser *Fake it* pour faire passer le test en faisant renvoyer à `getTranslation` la réponse attendue par le test.
 [X] 4- Ajouter dans le test la vérification d’une seconde traduction qui soit différente de la première.
 [X] 5- Ajouter à la classe `Dictionary`une table de hachage `Map<String, String> translations`.
+[X] 6- Rendre le code de `addTranslation` et de `getTranslation` correct.
+[7] 7- Améliorer le test du vide du dictionnaire en augmentant le test initial.
+
+#JUnit#
