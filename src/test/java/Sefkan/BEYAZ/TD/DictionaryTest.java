@@ -20,4 +20,10 @@ public class DictionaryTest {
         assertThat(dict.getName(),equalTo("Example"));
 
     }
+
+    @Test public void DictionaryVide(){
+
+        assertThat(dict.isEmpty(),equalTo(true));
+
+    } 
 }
