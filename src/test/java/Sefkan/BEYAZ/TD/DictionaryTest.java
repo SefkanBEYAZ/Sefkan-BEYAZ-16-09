@@ -23,7 +23,7 @@ public class DictionaryTest {
 
     @Test public void DictionaryVide(){
 
-        assertThat(dict.isEmpty(),equalTo(false));
+        assertThat(dict.isEmpty(),equalTo(true));
 
     } 
 

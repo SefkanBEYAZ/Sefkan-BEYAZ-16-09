@@ -27,7 +27,7 @@ public class Dictionary {
 
     public boolean isEmpty(){
 
-        if (this.getName().isEmpty()) return true;
+        if (this.traduction.isEmpty()) return true;
         else return false;
     }
 
