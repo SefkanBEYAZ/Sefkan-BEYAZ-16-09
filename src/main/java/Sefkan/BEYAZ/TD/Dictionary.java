@@ -9,6 +9,11 @@ public class Dictionary {
     public Dictionary(){}
     public Dictionary(String name){
         this.name=name;
+        this.traduction= new HashMap<>();
+    }
+
+    public void setName(String name){
+        this.name=name;
     }
 
     public String getName(){
@@ -17,14 +22,17 @@ public class Dictionary {
 
     public String getTranslation(String mot){
         
-        if(mot.equals("contre")) return "against";
-        else return "pour";
+        return this.traduction.get(mot);
     }
 
     public boolean isEmpty(){
 
         if (this.getName().isEmpty()) return true;
         else return false;
+    }
+
+    public void addTranslation(String mot, String traduction){
+        this.traduction.put(mot,traduction);
     }
 
 }
