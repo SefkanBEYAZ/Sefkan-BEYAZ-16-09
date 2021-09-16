@@ -1,8 +1,10 @@
 package Sefkan.BEYAZ.TD;
 
+import java.util.HashMap;
 public class Dictionary {
     
     private String name;
+    private HashMap<String,String> traduction;
 
     public Dictionary(){}
     public Dictionary(String name){
@@ -14,7 +16,9 @@ public class Dictionary {
     }
 
     public String getTranslation(String mot){
-        return "against";
+        
+        if(mot.equals("contre")) return "against";
+        else return "pour";
     }
 
     public boolean isEmpty(){

@@ -14,4 +14,6 @@
 
 [X] 1- Écrire un test permettant de vérifier que l’ajout d’une traduction au dictionnaire (`addTranslation`) se passe correctement lors de la vérification (`getTranslation`).
 [X] 2- Oui, on pourrait ne pas implémenter la méthode addTranslation et directement ajouter une traduction dans le constructeur
-[3] 3- Utiliser *Fake it* pour faire passer le test en faisant renvoyer à `getTranslation` la réponse attendue par le test.
+[X] 3- Utiliser *Fake it* pour faire passer le test en faisant renvoyer à `getTranslation` la réponse attendue par le test.
+[X] 4- Ajouter dans le test la vérification d’une seconde traduction qui soit différente de la première.
+[X] 5- Ajouter à la classe `Dictionary`une table de hachage `Map<String, String> translations`.
