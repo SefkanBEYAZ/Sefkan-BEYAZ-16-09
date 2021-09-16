@@ -3,7 +3,7 @@ package Sefkan.BEYAZ.TD;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
-public class Dictionary {
+public class Dictionary implements IDictionary {
     
     private String name;
     private HashMap<String,List<String>> traduction_multiple;
@@ -30,7 +30,7 @@ public class Dictionary {
         return this.traduction_multiple.get(mot);
     }
 
-    public List getList(){
+    public List<String> getList(){
         return this.list;
     }
     public void setList(String mot){
@@ -55,11 +55,11 @@ public class Dictionary {
     
     }
 
-    public String GetInverse(String traduction){
+    public String getInverse(String traduction){
         String ret= null;
         for(String key: this.traduction_multiple.keySet())
             for(String i: this.getTranslation(key)){
-                if(i == traduction){
+                if(i.equals(traduction)){
                     ret=key;
                 }
             }

@@ -3,7 +3,6 @@ package Sefkan.BEYAZ.TD;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -51,6 +50,6 @@ public class DictionaryTest {
     }
 
     @Test public void TestTraductionInverse(){
-        assertThat(dict.GetInverse("against"),equalTo("contre"));
+        assertThat(dict.getInverse("against"),equalTo("contre"));
     }
 }

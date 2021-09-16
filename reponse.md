@@ -31,4 +31,10 @@
 
 #Traduction Inverse#
 [X] 1-Écrire un test afin de vérifier le fonctionnement de telles traductions.
+[X] 2-Proposer une implémentation simple, rapide et qui passe les tests existants afin d’atteindre la green bar
+[ ] 3-Je ne comprends pas où est le problème.
+
+#Chargement de fichier
+
+[X] 1- On réalise dans ce cas un test d'implémentation
 
